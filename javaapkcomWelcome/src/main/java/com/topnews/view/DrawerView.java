@@ -8,7 +8,6 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu.OnClosedListener;
@@ -16,6 +15,7 @@ import com.topnews.R;
 import com.topnews.SettingsActivity;
 /** 
  * 自定义SlidingMenu 测拉菜单类
+ * 测试
  * */
 public class DrawerView implements OnClickListener{
 	private final Activity activity;
