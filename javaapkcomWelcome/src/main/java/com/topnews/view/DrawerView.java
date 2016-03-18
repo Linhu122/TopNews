@@ -39,7 +39,7 @@ public class DrawerView implements OnClickListener{
 		localSlidingMenu.attachToActivity(activity, SlidingMenu.RIGHT);//使SlidingMenu附加在Activity右边
 //		localSlidingMenu.setBehindWidthRes(R.dimen.left_drawer_avatar_size);//设置SlidingMenu菜单的宽度
 		localSlidingMenu.setMenu(R.layout.left_drawer_fragment);//设置menu的布局文件
-//		localSlidingMenu.toggle();//动态判断自动关闭或开启SlidingMenu
+//		 localSlidingMenu.toggle();//动态判断自动关闭或开启SlidingMenu
 		localSlidingMenu.setSecondaryMenu(R.layout.left_drawer_fragment);
 		localSlidingMenu.setSecondaryShadowDrawable(R.drawable.shadowright);
 		localSlidingMenu.setOnOpenedListener(new SlidingMenu.OnOpenedListener() {
