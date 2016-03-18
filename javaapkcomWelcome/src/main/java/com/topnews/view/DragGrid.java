@@ -1,10 +1,6 @@
 package com.topnews.view;
 
 
-import com.topnews.R;
-import com.topnews.adapter.DragAdapter;
-import com.topnews.tool.DataTools;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.PixelFormat;
@@ -24,8 +20,14 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.topnews.R;
+import com.topnews.adapter.DragAdapter;
+import com.topnews.tool.DataTools;
+
 public class DragGrid extends GridView {
-	/** 点击时候的X位置 */
+	/** 点击时候的X位置 
+	 * 测试
+	 * */
 	public int downX;
 	/** 点击时候的Y位置 */
 	public int downY;
