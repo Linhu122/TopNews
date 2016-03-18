@@ -115,7 +115,7 @@ public class MainActivity extends FragmentActivity {
 				}
 			}
 		});
-		top_more.setOnClickListener(new OnClickListener() {
+	/*	top_more.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -126,7 +126,7 @@ public class MainActivity extends FragmentActivity {
 					side_drawer.showSecondaryMenu();
 				}
 			}
-		});
+		});*/
 		setChangelView();
 	}
 	/** 
