@@ -2,12 +2,14 @@ package com.topnews.view;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu.OnClosedListener;
@@ -69,6 +71,8 @@ public class DrawerView implements OnClickListener{
 				// TODO Auto-generated method stub
 				if(isChecked){
 					night_mode_text.setText(activity.getResources().getString(R.string.action_night_mode));
+					Toast.makeText(activity,"Ò¹¼äÄ£Ê½",Toast.LENGTH_LONG).show();
+
 				}else{
 					night_mode_text.setText(activity.getResources().getString(R.string.action_day_mode));
 				}

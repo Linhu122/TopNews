@@ -2,16 +2,12 @@ package com.topnews.fragment;
 
 import java.util.ArrayList;
 
-import org.w3c.dom.Text;
-
-import com.topnews.CityListActivity;
 import com.topnews.DetailsActivity;
 import com.topnews.R;
 import com.topnews.adapter.NewsAdapter;
 import com.topnews.bean.NewsEntity;
 import com.topnews.tool.Constants;
 import com.topnews.view.HeadListView;
-import com.topnews.view.TopToastView;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -27,7 +23,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -117,11 +112,11 @@ public class NewsFragment extends Fragment {
 				if(mAdapter == null){
 					mAdapter = new NewsAdapter(activity, newsList);
 					//判断是不是城市的频道
-					if(channel_id == Constants.CHANNEL_CITY){
+					/*if(channel_id == Constants.CHANNEL_CITY){
 						//是城市频道
 						mAdapter.setCityChannel(true);
 						initCityChannel();
-					}
+					}*/
 				}
 				mListView.setAdapter(mAdapter);
 				mListView.setOnScrollListener(mAdapter);
@@ -132,17 +127,17 @@ public class NewsFragment extends Fragment {
 					public void onItemClick(AdapterView<?> parent, View view,
 							int position, long id) {
 						Intent intent = new Intent(activity, DetailsActivity.class);
-						if(channel_id == Constants.CHANNEL_CITY){
+						/*if(channel_id == Constants.CHANNEL_CITY){
 							if(position != 0){
 								intent.putExtra("news", mAdapter.getItem(position - 1));
 								startActivity(intent);
 								activity.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 							}
-						}else{
+						}else{}*/
 							intent.putExtra("news", mAdapter.getItem(position));
 							startActivity(intent);
 							activity.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-						}
+
 					}
 				});
 				if(channel_id == 1){
@@ -157,7 +152,7 @@ public class NewsFragment extends Fragment {
 	};
 	
 	/* 初始化选择城市的header*/
-	public void initCityChannel() {
+	/*public void initCityChannel() {
 		View headview = LayoutInflater.from(activity).inflate(R.layout.city_category_list_tip, null);
 		TextView chose_city_tip = (TextView) headview.findViewById(R.id.chose_city_tip);
 		chose_city_tip.setOnClickListener(new OnClickListener() {
@@ -170,7 +165,7 @@ public class NewsFragment extends Fragment {
 			}
 		});
 		mListView.addHeaderView(headview);
-	}
+	}*/
 	
 	/* 初始化通知栏目*/
 	private void initNotify() {

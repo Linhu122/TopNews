@@ -13,19 +13,18 @@
         <activity
             android:name="com.topnews.Welcome"
             android:label="@string/app_name" >
+
+        </activity>
+        <activity android:name="com.topnews.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.topnews.MainActivity" >
-        </activity>
         <activity android:name="com.topnews.ChannelActivity" >
         </activity>
         <activity android:name="com.topnews.DetailsActivity" >
-        </activity>
-        <activity android:name="com.topnews.CityListActivity" >
         </activity>
         <activity android:name="com.topnews.SettingsActivity" >
         </activity>

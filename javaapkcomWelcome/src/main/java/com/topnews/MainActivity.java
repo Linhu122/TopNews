@@ -157,7 +157,7 @@ public class MainActivity extends FragmentActivity {
 			TextView columnTextView = new TextView(this);
 			columnTextView.setTextAppearance(this, R.style.top_category_scroll_view_item_text);
 //			localTextView.setBackground(getResources().getDrawable(R.drawable.top_category_scroll_text_view_bg));
-			columnTextView.setBackgroundResource(R.drawable.radio_buttong_bg);
+			columnTextView.setBackgroundResource(R.drawable.radio_button_bg);
 			columnTextView.setGravity(Gravity.CENTER);
 			columnTextView.setPadding(5, 5, 5, 5);
 			columnTextView.setId(i);
@@ -179,7 +179,8 @@ public class MainActivity extends FragmentActivity {
 				        	  mViewPager.setCurrentItem(i);
 				          }
 			          }
-			          Toast.makeText(getApplicationContext(), userChannelList.get(v.getId()).getName(), Toast.LENGTH_SHORT).show();
+					//气泡说明选择的栏目，并不需要
+			          //Toast.makeText(getApplicationContext(), userChannelList.get(v.getId()).getName(), Toast.LENGTH_SHORT).show();
 				}
 			});
 			mRadioGroup_content.addView(columnTextView, i ,params);

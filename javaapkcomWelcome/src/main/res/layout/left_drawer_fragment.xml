@@ -272,8 +272,8 @@
 
                 <TextView
                     style="@style/left_drawer_item_text"
-                    android:drawableLeft="@drawable/ic_drawer_feedback"
-                    android:text="@string/left_drawer_item_feedback" />
+                    android:drawableLeft="@drawable/ic_drawer_ours"
+                    android:text="@string/left_drawer_item_ours" />
             </RelativeLayout>
 
             <ImageView style="@style/left_drawer_item_line" />

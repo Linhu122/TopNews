@@ -106,13 +106,15 @@ public class NewsAdapter extends BaseAdapter implements SectionIndexer, HeaderAd
 			view = inflater.inflate(R.layout.list_item, null);
 			mHolder = new ViewHolder();
 			mHolder.item_layout = (LinearLayout)view.findViewById(R.id.item_layout);
-			mHolder.comment_layout = (RelativeLayout)view.findViewById(R.id.comment_layout);
+			//TODO 此处注释掉list_item相关组件
+			//mHolder.comment_layout = (RelativeLayout)view.findViewById(R.id.comment_layout);
 			mHolder.item_title = (TextView)view.findViewById(R.id.item_title);
-			mHolder.item_source = (TextView)view.findViewById(R.id.item_source);
+			//TODO 此处注释掉list_item相关组件
+			/*mHolder.item_source = (TextView)view.findViewById(R.id.item_source);
 			mHolder.list_item_local = (TextView)view.findViewById(R.id.list_item_local);
 			mHolder.comment_count = (TextView)view.findViewById(R.id.comment_count);
-			mHolder.publish_time = (TextView)view.findViewById(R.id.publish_time);
-			mHolder.item_abstract = (TextView)view.findViewById(R.id.item_abstract);
+			mHolder.publish_time = (TextView)view.findViewById(R.id.publish_time);*//*
+			mHolder.item_abstract = (TextView)view.findViewById(R.id.item_abstract);*/
 			mHolder.alt_mark = (ImageView)view.findViewById(R.id.alt_mark);
 			mHolder.right_image = (ImageView)view.findViewById(R.id.right_image);
 			mHolder.item_image_layout = (LinearLayout)view.findViewById(R.id.item_image_layout);
@@ -120,9 +122,9 @@ public class NewsAdapter extends BaseAdapter implements SectionIndexer, HeaderAd
 			mHolder.item_image_1 = (ImageView)view.findViewById(R.id.item_image_1);
 			mHolder.item_image_2 = (ImageView)view.findViewById(R.id.item_image_2);
 			mHolder.large_image = (ImageView)view.findViewById(R.id.large_image);
-			mHolder.popicon = (ImageView)view.findViewById(R.id.popicon);
-			mHolder.comment_content = (TextView)view.findViewById(R.id.comment_content);
-			mHolder.right_padding_view = (View)view.findViewById(R.id.right_padding_view);
+			/*mHolder.popicon = (ImageView)view.findViewById(R.id.popicon);*/
+			/*mHolder.comment_content = (TextView)view.findViewById(R.id.comment_content);*/
+			/*mHolder.right_padding_view = (View)view.findViewById(R.id.right_padding_view);*/
 			//头部的日期部分
 			mHolder.layout_list_section = (LinearLayout)view.findViewById(R.id.layout_list_section);
 			mHolder.section_text = (TextView)view.findViewById(R.id.section_text);
@@ -135,13 +137,16 @@ public class NewsAdapter extends BaseAdapter implements SectionIndexer, HeaderAd
 		//获取position对应的数据
 		NewsEntity news = getItem(position);
 		mHolder.item_title.setText(news.getTitle());
-		mHolder.item_source.setText(news.getSource());
-		mHolder.comment_count.setText("评论" + news.getCommentNum());
-		mHolder.publish_time.setText(news.getPublishTime() + "小时前");
+		//TODO 此处注释掉list_item相关组件
+		/*mHolder.item_source.setText(news.getSource());*/
+		//TODO 此处注释掉list_item相关组件
+		/*mHolder.comment_count.setText("评论" + news.getCommentNum());
+		mHolder.publish_time.setText(news.getPublishTime() + "小时前");*/
 		List<String> imgUrlList = news.getPicList();
-		mHolder.popicon.setVisibility(View.VISIBLE);
-		mHolder.comment_count.setVisibility(View.VISIBLE);
-		mHolder.right_padding_view.setVisibility(View.VISIBLE);
+		//TODO 此处注释掉list_item相关组件
+		/*mHolder.popicon.setVisibility(View.VISIBLE);
+		mHolder.comment_count.setVisibility(View.VISIBLE);*//*
+		mHolder.right_padding_view.setVisibility(View.VISIBLE);*/
 		if(imgUrlList !=null && imgUrlList.size() !=0){
 			if(imgUrlList.size() == 1){
 				mHolder.item_image_layout.setVisibility(View.GONE);
@@ -150,9 +155,10 @@ public class NewsAdapter extends BaseAdapter implements SectionIndexer, HeaderAd
 					mHolder.large_image.setVisibility(View.VISIBLE);
 					mHolder.right_image.setVisibility(View.GONE);
 					imageLoader.displayImage(imgUrlList.get(0), mHolder.large_image, options);
-					mHolder.popicon.setVisibility(View.GONE);
-					mHolder.comment_count.setVisibility(View.GONE);
-					mHolder.right_padding_view.setVisibility(View.GONE);
+					//TODO 此处注释掉list_item相关组件
+				/*	*//*mHolder.popicon.setVisibility(View.GONE);
+					mHolder.comment_count.setVisibility(View.GONE);*//*
+					mHolder.right_padding_view.setVisibility(View.GONE);*/
 				}else{
 					mHolder.large_image.setVisibility(View.GONE);
 					mHolder.right_image.setVisibility(View.VISIBLE);
@@ -178,26 +184,27 @@ public class NewsAdapter extends BaseAdapter implements SectionIndexer, HeaderAd
 			mHolder.alt_mark.setVisibility(View.GONE);
 		}
 		//判断该新闻概述是否为空
-		if (!TextUtils.isEmpty(news.getNewsAbstract())) {
+		/*if (!TextUtils.isEmpty(news.getNewsAbstract())) {
 			mHolder.item_abstract.setVisibility(View.VISIBLE);
 			mHolder.item_abstract.setText(news.getNewsAbstract());
 		} else {
 			mHolder.item_abstract.setVisibility(View.GONE);
-		}
+		}*/
 		//判断该新闻是否是特殊标记的，推广等，为空就是新闻
-		if(!TextUtils.isEmpty(news.getLocal())){
+		/*if(!TextUtils.isEmpty(news.getLocal())){
 			mHolder.list_item_local.setVisibility(View.VISIBLE);
 			mHolder.list_item_local.setText(news.getLocal());
 		}else{
 			mHolder.list_item_local.setVisibility(View.GONE);
-		}
+		}*/
 		//判断评论字段是否为空，不为空显示对应布局
 		if(!TextUtils.isEmpty(news.getComment())){
+			//TODO 此处注释掉list_item相关组件
 			//news.getLocal() != null && 
-			mHolder.comment_layout.setVisibility(View.VISIBLE);
-			mHolder.comment_content.setText(news.getComment());
+		/*	mHolder.comment_layout.setVisibility(View.VISIBLE);
+			mHolder.comment_content.setText(news.getComment());*/
 		}else{
-			mHolder.comment_layout.setVisibility(View.GONE);
+			/*mHolder.comment_layout.setVisibility(View.GONE);*/
 		}
 		//判断该新闻是否已读
 		if(!news.getReadStatus()){
@@ -206,7 +213,8 @@ public class NewsAdapter extends BaseAdapter implements SectionIndexer, HeaderAd
 			mHolder.item_layout.setSelected(false);
 		}
 		//设置+按钮点击效果
-		mHolder.popicon.setOnClickListener(new popAction(position));
+		//TODO 此处注释掉list_item相关组件
+		/*mHolder.popicon.setOnClickListener(new popAction(position));*/
 		//头部的相关东西
 		int section = getSectionForPosition(position);
 		if (getPositionForSection(section) == position) {
@@ -221,19 +229,20 @@ public class NewsAdapter extends BaseAdapter implements SectionIndexer, HeaderAd
 	}
 
 	static class ViewHolder {
+		//TODO 此处注释掉list_item相关组件
 		LinearLayout item_layout;
 		//title
 		TextView item_title;
 		//图片源
 		TextView item_source;
 		//类似推广之类的标签
-		TextView list_item_local;
+		//TextView list_item_local;
 		//评论数量
-		TextView comment_count;
+		//TextView comment_count;
 		//发布时间
-		TextView publish_time;
+		//TextView publish_time;
 		//新闻摘要
-		TextView item_abstract;
+		//TextView item_abstract;
 		//右上方TAG标记图片
 		ImageView alt_mark;
 		//右边图片
@@ -246,12 +255,12 @@ public class NewsAdapter extends BaseAdapter implements SectionIndexer, HeaderAd
 		//大图的图片的话布局
 		ImageView large_image;
 		//pop按钮
-		ImageView popicon;
+		//ImageView popicon;
 		//评论布局
-		RelativeLayout comment_layout;
-		TextView comment_content;
+		//RelativeLayout comment_layout;
+		//TextView comment_content;
 		//paddingview
-		View right_padding_view;
+		//View right_padding_view;
 		
 		//头部的日期部分
 		LinearLayout layout_list_section;
