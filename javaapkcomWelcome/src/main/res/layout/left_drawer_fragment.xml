@@ -50,7 +50,7 @@
         android:gravity="center_horizontal"
         android:orientation="vertical" >
 
-        <LinearLayout
+       <!-- <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16.0dip"
@@ -84,7 +84,7 @@
             android:layout_marginBottom="13.0dip"
             android:text="@string/left_drawer_no_login_tip"
             android:textColor="@color/left_drawer_no_login_tip_text"
-            android:textSize="11.0sp" />
+            android:textSize="11.0sp" />-->
     </LinearLayout>
 
     <ImageView style="@style/left_drawer_item_line" />
@@ -112,7 +112,7 @@
 
             <ImageView style="@style/left_drawer_item_line" />
 
-            <RelativeLayout
+           <!-- <RelativeLayout
                 android:id="@+id/search_btn"
                 style="@style/left_drawer_item_layout" >
 
@@ -253,7 +253,7 @@
 
                 <ImageView style="@style/left_drawer_item_line" />
             </LinearLayout>
-
+-->
             <RelativeLayout
                 android:id="@+id/setting_btn"
                 style="@style/left_drawer_item_layout" >
@@ -278,7 +278,7 @@
 
             <ImageView style="@style/left_drawer_item_line" />
 
-            <RelativeLayout
+         <!--   <RelativeLayout
                 android:id="@+id/appstore_btn"
                 style="@style/left_drawer_item_layout"
                 android:visibility="visible" >
@@ -291,7 +291,7 @@
 
             <ImageView
                 android:id="@+id/appstore_line"
-                style="@style/left_drawer_item_line" />
+                style="@style/left_drawer_item_line" />-->
         </LinearLayout>
     </ScrollView>
 
